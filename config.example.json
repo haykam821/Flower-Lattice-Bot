@@ -1,0 +1,12 @@
+{
+    "discord": {
+        "token": "",
+        "owner": ""
+    },
+    "database": {
+        "host": "",
+        "database": "",
+        "user": "",
+        "password": ""
+    }
+}
