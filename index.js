@@ -16,6 +16,7 @@ client.setProvider(
 client.registry.registerGroups([
 	["pxls", "Pxls.space"],
 	["info", "Info"],
+	["random", "Chance"],
 ]);
 client.registry.registerDefaults();
 client.registry.registerCommandsIn(path.join(__dirname, "commands"));

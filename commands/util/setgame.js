@@ -3,19 +3,19 @@ const commando = require("discord.js-commando");
 module.exports = class extends commando.Command {
 	constructor(client) {
 		super(client, {
-			name: "setpresence",
+			name: "setgame",
+			alias: [
+				"setstatus",
+			],
 			ownerOnly: true,
 			group: "util",
-			memberName: "setpresence",
-			description: "Changes the presence of the bot.",
+			memberName: "setgame",
+			description: "Changes the playing message of the bot.",
 			args: [
 				{
 					key: "status",
-					prompt: "The new presence of the bot.",
+					prompt: "What game should the bot start playing in its status?",
 					type: "string",
-					oneOf: [
-
-					],
 				},
 			],
 		});
