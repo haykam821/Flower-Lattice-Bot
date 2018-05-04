@@ -18,6 +18,7 @@ client.registry.registerGroups([
 	["info", "Info"],
 	["random", "Chance"],
 	["datetime", "Date & Time"],
+	["moderation", "Mod Tools"],
 ]);
 client.registry.registerDefaults();
 client.registry.registerCommandsIn(path.join(__dirname, "commands"));
