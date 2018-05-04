@@ -16,21 +16,20 @@ module.exports = class extends commando.Command {
 			args: [
 				{
 					key: "xPos",
-					label: "number",
-					type: "float",
+					label: "x",
+					type: "integer",
 					prompt: "What X coordinate?",
 					default: 0,
 				},
 				{
 					key: "yPos",
-					label: "number",
-					type: "float",
+					label: "y",
+					type: "integer",
 					prompt: "What Y coordinate?",
 					default: 0,
 				},
 				{
 					key: "scale",
-					label: "number",
 					type: "float",
 					prompt: "What scale?",
 					default: 25,
