@@ -13,7 +13,6 @@ module.exports = class extends commando.Command {
 			alias: [
 				"dice",
 			],
-			ownerOnly: true,
 			group: "random",
 			memberName: "roll",
 			description: "Rolls a die.",
