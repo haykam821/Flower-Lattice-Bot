@@ -1,4 +1,5 @@
 const commando = require("discord.js-commando");
+const actlog = require("discord.js-action-logger");
 
 module.exports = class extends commando.Command {
 	constructor(client) {
@@ -27,11 +28,7 @@ module.exports = class extends commando.Command {
 
 	async run(msg, args) {
 		await args.toKick.kick(`Triggered by ${msg.author.tag}: "${args.reason}".`);
-
-		const alog = msg.guild.channels.get(msg.guild.settings.get("actionlogs"));
-		if (alog) {
-			await alog.send(`User <@${args.toKick.id}> was kicked for reason: "${args.reason}" by <@${msg.author.id}>`);
-		}
+		await actlog("Kick", msg.guild.channels.get(msg.guild.settings.get("actionlogs")), msg, args.toKick, args.reason);
 
 		msg.reply("That user was kicked. ;)");
 	}
