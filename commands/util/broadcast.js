@@ -24,8 +24,8 @@ module.exports = class extends commando.Command {
 	}
 
 	async run(msg, args) {
-		for (const guild of msg.client.guilds) {
-			guild.channels.array()[0].send(args.message);
-		}
+		msg.client.guilds.array().forEach(guild => {
+			return msg.client.channels.get(guild.systemChannelID).send(args.message);
+		});
 	}
 };
