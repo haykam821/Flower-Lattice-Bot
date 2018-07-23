@@ -26,6 +26,10 @@ module.exports = class extends commando.Command {
 	}
 
 	async run(msg, args) {
-		return args.target.setName(args.newName);
+		// Keep old name so we can use it after it is obsolete.
+		const oldName = args.target.name;
+
+		await args.target.setName(args.newName);
+		return msg.reply(`I have changed the name of ${args.target} from \`${oldName}\` to \`${args.newName}\`.`);
 	}
 };
