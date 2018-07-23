@@ -12,6 +12,7 @@
     "eslint": "^4.19.1"
   },
   "dependencies": {
+    "cydia-api-node": "^1.0.2",
     "discord.js": "^11.3.2",
     "discord.js-action-logger": "^1.0.0",
     "discord.js-commando": "^0.10.0",
