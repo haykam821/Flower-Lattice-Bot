@@ -22,7 +22,7 @@ module.exports = class extends commando.Command {
 	}
 
 	async run(msg, args) {
-		msg.channel.setTopic(args.newTopic);
+		await msg.channel.setTopic(args.newTopic);
 		return msg.reply(`The topic of this channel has been changed to \`${args.newTopic}\`.`);
 	}
 };
