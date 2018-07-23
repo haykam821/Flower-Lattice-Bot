@@ -13,6 +13,7 @@ client.registry.registerGroups([
 	["random", "Chance"],
 	["datetime", "Date & Time"],
 	["moderation", "Mod Tools"],
+	["channels", "Channel Utilities"],
 ]);
 client.registry.registerDefaults();
 client.registry.registerCommandsIn(path.join(__dirname, "commands"));

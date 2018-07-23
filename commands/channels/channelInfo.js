@@ -5,7 +5,7 @@ module.exports = class extends commando.Command {
 		super(client, {
 			name: "channel",
 			aliases: ["channelinfo"],
-			group: "info",
+			group: "channels",
 			memberName: "channel",
 			description: "Retrieves information about a channel.",
 			examples: ["channel #general", "channel general"],
