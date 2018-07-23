@@ -23,11 +23,11 @@ module.exports = class extends commando.Command {
 	async run(msg, args) {
 		cydia.getAllInfo(args.id).then(info => {
 			if (info) {
-				console.log(info);
 				return msg.reply("", {
 					embed: {
 						title: `${info.display} (${info.repo.name})`,
 						description: info.summary,
+						color: 0xA3694E,
 						fields: [{
 							name: "Version",
 							value: info.version,
